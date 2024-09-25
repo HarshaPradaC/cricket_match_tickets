@@ -41,6 +41,9 @@ Built with HTML, CSS, and JavaScript, this web app provides a seamless and intui
 
 **THANK YOU!!**
 
-**BY HARSHA PRADA CHANDRAKUMAR, KCT
-     AMBIKA,KCT**
+**BY 
+     
+     HARSHA PRADA CHANDRAKUMAR, KCT
+     
+     AMBIKA, KCT**
 
