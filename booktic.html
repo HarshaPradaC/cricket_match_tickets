@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select, input[type="number"], button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .price-display {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .dialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cricket Ticket Booking</h1>
+        <label for="seatCategory">Choose Seat Category:</label>
+        <select id="seatCategory">
+            <option value="" disabled selected>Select a category</option>
+            <option value="vip">VIP - $100</option>
+            <option value="pavilion">Pavilion - $80</option>
+            <option value="general">General - $50</option>
+            <option value="box">Box - $120</option>
+        </select>
+
+        <label for="numberOfSeats">Number of Seats:</label>
+        <input type="number" id="numberOfSeats" value="1" min="1" max="10">
+
+        <button id="totalPriceButton">Calculate Total Price</button>
+        <div id="totalPrice" class="price-display"></div>
+        <button id="bookNowButton" style="display:none;">Book Now</button>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="dialog" class="dialog">
+        <p>Congratulations! Your seats have been reserved temporarily. For payment details to book your seats permanently, please check your email.</p>
+        <button id="closeDialogButton">okay!</button>
+    </div>
+
+    <script>
+        document.getElementById('totalPriceButton').addEventListener('click', function() {
+            const seatCategory = document.getElementById('seatCategory');
+            const selectedOption = seatCategory.options[seatCategory.selectedIndex];
+            const numberOfSeats = parseInt(document.getElementById('numberOfSeats').value);
+
+            if (selectedOption.value) {
+                const priceMap = {
+                    vip: 100,
+                    pavilion: 80,
+                    general: 50,
+                    box: 120
+                };
+
+                const pricePerSeat = priceMap[selectedOption.value];
+                const totalPrice = pricePerSeat * numberOfSeats;
+
+                document.getElementById('totalPrice').innerText = `Total Price: $${totalPrice}`;
+                document.getElementById('bookNowButton').style.display = 'block'; // Show Book Now button
+            } else {
+                document.getElementById('totalPrice').innerText = 'Please select a seat category.';
+            }
+        });
+
+        document.getElementById('bookNowButton').addEventListener('click', function() {
+            document.getElementById('overlay').style.display = 'block'; // Show overlay
+            document.getElementById('dialog').style.display = 'block'; // Show dialog
+        });
+
+        document.getElementById('closeDialogButton').addEventListener('click', function() {
+            document.getElementById('overlay').style.display = 'none'; // Hide overlay
+            document.getElementById('dialog').style.display = 'none'; // Hide dialog
+        });
+    </script>
+</body>
+</html>
