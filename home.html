@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Matches</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.webp" alt="Cricket Matches Logo">
+        </div>
+        <nav>
+            <ul id="navigate">
+                <li><a href="#">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="booking.html">Book Online</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+           
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Explore the Thrilling World of Cricket Matches</h1>
+            <a href="sign-in-sign-up.html" class="cta-button">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="event-details">
+        <h2>Event Details</h2>
+        <div class="event-info">
+            <div class="event-text">
+                <h3>Cricket Fan Fest Carnival</h3>
+                <p>31 Oct 2024, 10:00 AM – 02:00 PM</p>
+                <p>Seaside Park, 1 N. Beach Blvd, Jacksonville Beach, FL 32250, USA</p>
+                
+            </div>
+            <div class="event-image">
+                <img id="image" src="oct.jpg" alt="Event Calendar">
+            </div>
+        </div>
+    </section>
+    <div id="footer"></div>
+
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
