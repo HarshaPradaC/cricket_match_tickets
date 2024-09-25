@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.event {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event .details {
+    text-align: left;
+}
+
+.event .details h3 {
+    margin: 0;
+    color: #333;
+}
+
+.event .details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.event .action {
+    display: flex;
+    align-items: center;
+}
+
+.event .action button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.event .action button.unavailable {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+    </style>
+
+    <h1>Upcoming Cricket Events</h1>
+    
+    <!-- Search bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for a match..." onkeyup="searchMatch()">
+    </div>
+  <!-- Filter Section -->
+
+<div class="filters">
+        <select id="dateFilter" onchange="applyFilters()">
+            <option value="">Select Date</option>
+            <!-- Options added dynamically based on available dates -->
+        </select>
+        <select id="stadiumFilter" onchange="applyFilters()">
+            <option value="">Select Stadium</option>
+            <!-- Options added dynamically based on stadiums -->
+        </select>
+        <label>
+            <input type="checkbox" id="availabilityFilter" onchange="applyFilters()">
+            Show only available tickets
+        </label>
+</div>
+    <!-- Event list -->
+    <div id="eventList">
+        <!-- Dynamic list of events will be shown here -->
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>
