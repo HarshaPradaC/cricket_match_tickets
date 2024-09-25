@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3e9;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #444;
+            color: white;
+        }
+        .blog-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .blog-post {
+            background: #fff;
+            margin: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .blog-post:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .blog-post img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .blog-post h3 {
+            margin: 10px 0;
+        }
+        .blog-post p {
+            color: #777;
+        }
+        .back-btn {
+            display: none;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #444;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 200px;
+            margin: 20px auto;
+        }
+        .post-details {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .post-details img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+        .post-details h2 {
+            margin-bottom: 10px;
+        }
+        .post-details p {
+            text-align: left;
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Blog </h1>
+</div>
+
+<div class="blog-container">
+    <div class="blog-post" onclick="openPost(0)">
+        <img src="bat.jpg" alt="Event 1">
+        <h3>Unleash Your Cricket Passion with XYZ Organization</h3>
+        <p>Are you ready to unleash your passion for cricket? Click to read more...</p>
+    </div>
+    <div class="blog-post" onclick="openPost(1)">
+        <img src="stadium2.jfif" alt="Event 2">
+        <h3>Engage with Cricket Enthusiasts on XYZ Organization's Website</h3>
+        <p>Looking for a place to engage with cricket enthusiasts? Click to read more...</p>
+    </div>
+    <div class="blog-post" onclick="openPost(2)">
+        <img src="matchday.jpg" alt="Event 3">
+        <h3>Cricket for Beginners: Join the Fun!</h3>
+        <p>Are you a beginner in cricket? XYZ Organization has events just for you. Click to read more...</p>
+    </div>
+    <div class="blog-post" onclick="openPost(3)">
+        <img src="nextchamp.webp" alt="Event 4">
+        <h3>Professional Cricket League: XYZ Special Event</h3>
+        <p>Witness top-tier professional cricket at XYZ Organization's exclusive event. Click to read more...</p>
+    </div>
+    <div class="blog-post" onclick="openPost(4)">
+        <img src="womencric.jpg" alt="Event 5">
+        <h3>Virtual Cricket Workshops: Learn from the Best</h3>
+        <p>Participate in virtual workshops led by professional cricketers. Click to read more...</p>
+    </div>
+</div>
+
+<!-- Post details section (hidden by default) -->
+<div class="post-details" id="postDetails" style="display: none;">
+    <div id="postContent">
+        <!-- Dynamic post content goes here -->
+    </div>
+</div>
+
+<div class="back-btn" id="backBtn" onclick="goBack()">Back to Blog</div>
+
+<script>
+    const posts = [
+        {
+            title: "Unleash Your Cricket Passion with XYZ Organization",
+            content: "Are you ready to unleash your passion for cricket? XYZ Organization's exciting new project offers thrilling cricket matches, coaching sessions, and skill showcases. Whether you're a beginner or a seasoned player, this event offers a wide range of activities for everyone.",
+            image: "bat.jpg",
+            description: "Join us on a two-day cricket fest where players of all skill levels can participate in friendly matches, compete in skills challenges, and receive coaching from professional players. You'll have the chance to network with fellow cricket enthusiasts, learn new techniques, and even win some exciting prizes!"
+        },
+        {
+            title: "Engage with Cricket Enthusiasts on XYZ Organization's Website",
+            content: "Looking for a place to engage with cricket enthusiasts? XYZ Organization’s website offers a community space for fans and players to connect.",
+            image: "stadium2.jfif",
+            description: "The event includes live forums, Q&A sessions with professional cricketers, and an online competition where you can showcase your cricket knowledge. Stay up to date with the latest events and join exclusive online streams of exciting matches!"
+        },
+        {
+            title: "Cricket for Beginners: Join the Fun!",
+            content: "New to cricket? XYZ Organization has beginner-friendly events to help you learn the ropes.",
+            image: "matchday.jpg",
+            description: "This event is perfect for those who want to learn the basics of cricket. With tutorials, coaching sessions, and friendly matches, beginners will gain confidence and start their cricket journey. Participants will receive a beginner’s kit, including all necessary equipment!"
+        },
+        {
+            title: "Professional Cricket League: XYZ Special Event",
+            content: "Witness top-tier professional cricket at XYZ Organization’s exclusive league event.",
+            image: "nextchamp.webp",
+            description: "This event features some of the best professional cricket players from around the world. Join us for live match viewing, meet-and-greet sessions with players, and exclusive behind-the-scenes access to team preparations. Don’t miss this thrilling display of high-level cricket!"
+        },
+        {
+            title: "Virtual Cricket Workshops: Learn from the Best",
+            content: "Can't attend in person? Join our virtual cricket workshops led by professional cricketers.",
+            image: "womencric.jpg",
+            description: "From the comfort of your home, you can learn from professional cricketers as they guide you through batting, bowling, and fielding techniques. Interactive Q&A sessions and personalized feedback are part of this exciting virtual event!"
+        }
+    ];
+
+    function openPost(index) {
+        const post = posts[index];
+        document.querySelector('.blog-container').style.display = 'none';
+        document.querySelector('#backBtn').style.display = 'block';
+        document.querySelector('#postDetails').style.display = 'block';
+        
+        document.querySelector('#postContent').innerHTML = `
+            <h2>${post.title}</h2>
+            <img src="${post.image}" alt="${post.title}">
+            <p>${post.content}</p>
+            <p>${post.description}</p>
+        `;
+    }
+
+    function goBack() {
+        document.querySelector('.blog-container').style.display = 'flex';
+        document.querySelector('#backBtn').style.display = 'none';
+        document.querySelector('#postDetails').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
