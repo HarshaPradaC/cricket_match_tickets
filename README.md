@@ -1,6 +1,6 @@
 # cricket_match_tickets
 Hi all!
-This is a sample website for cricket blogs, ticket bookings and various other features!!
+
 This project is a Cricket Ticket Booking Website, allowing users to easily select seat categories, specify the number of seats, calculate the total price dynamically, and reserve tickets temporarily. Alongside the booking functionality, the website also features a Blog Section that provides users with the latest updates, news, and tips related to cricket events and match-day experiences.
 
 Built with HTML, CSS, and JavaScript, this web app provides a seamless and intuitive interface for both booking cricket match tickets and staying informed about upcoming events.
