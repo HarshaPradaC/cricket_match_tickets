@@ -1,0 +1,129 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+   
+}
+
+.logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    background-image: url('cricket-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:  url('background.jpg');
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #a7a7a6;
+} 
+
+/* Event Details Section */
+.event-details {
+    background-color: #6f6e70;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.event-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.event-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.event-text {
+    background-color: #b8b4ba;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.event-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.event-text p {
+    margin-bottom: 10px;
+}
+
+.event-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+#image{
+    width:80%;
+    height:200px;
+}
+#navigate{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
