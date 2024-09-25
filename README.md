@@ -10,14 +10,19 @@ Built with HTML, CSS, and JavaScript, this web app provides a seamless and intui
 **Ticket Booking**
 
 **Select Seat Category**: Users can choose from various seat categories (VIP, Pavilion, General, Box), each with different pricing.
+
 **Dynamic Pricing Calculation**: The total price is calculated automatically based on the selected seat category and number of seats.
+
 **Temporary Seat Reservation**: Once the total price is displayed, users can click the "Book Now" button to temporarily reserve seats.
+
 **Booking Confirmation Dialog**: A confirmation dialog informs the user that their seats have been reserved temporarily and provides further information to complete the booking process via email.
 
 **Blog Section**
 
 **Cricket Updates**: Stay up-to-date with the latest cricket news and event announcements.
+
 **Match-Day Tips**: Get tips on attending matches, best seating options, and more.
+
 **Interactive Content**: Users can engage with blog posts, learn about upcoming matches, and share their experiences.
 
 How it Works??
