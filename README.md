@@ -25,10 +25,22 @@ Built with HTML, CSS, and JavaScript, this web app provides a seamless and intui
 
 **Interactive Content**: Users can engage with blog posts, learn about upcoming matches, and share their experiences.
 
-How it Works??
+**HOW IT WORKS??**
 
 **Select Seat Category**: The user selects a seat category from the dropdown menu.
+
 **Specify Number of Seats**: The user inputs the number of seats.
+
 **Calculate Total Price**: Click the "Total Price" button to view the cost.
+
 **Book Now**: Once the total price is displayed, a "Book Now" button appears.
+
 **Reservation Confirmation**: Clicking "Book Now" triggers a dialog confirming the seats have been temporarily reserved with additional instructions sent via email.
+
+** A user-friendly cricket ticket booking platform with integrated blog updates for a seamless experience.**
+
+**THANK YOU!!**
+
+**BY HARSHA PRADA CHANDRAKUMAR, KCT
+     AMBIKA,KCT**
+
