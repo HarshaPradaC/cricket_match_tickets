@@ -5,9 +5,9 @@ This project is a Cricket Ticket Booking Website, allowing users to easily selec
 
 Built with HTML, CSS, and JavaScript, this web app provides a seamless and intuitive interface for both booking cricket match tickets and staying informed about upcoming events.
 
-**Features**
+**FEATURES**
 
-**Ticket Booking**
+**TICKET BOOKING**
 
 **Select Seat Category**: Users can choose from various seat categories (VIP, Pavilion, General, Box), each with different pricing.
 
@@ -17,7 +17,7 @@ Built with HTML, CSS, and JavaScript, this web app provides a seamless and intui
 
 **Booking Confirmation Dialog**: A confirmation dialog informs the user that their seats have been reserved temporarily and provides further information to complete the booking process via email.
 
-**Blog Section**
+**BLOG SECTION**
 
 **Cricket Updates**: Stay up-to-date with the latest cricket news and event announcements.
 
@@ -42,7 +42,6 @@ Built with HTML, CSS, and JavaScript, this web app provides a seamless and intui
 **THANK YOU!!**
 
 **BY 
-     
      HARSHA PRADA CHANDRAKUMAR, KCT
      
      AMBIKA, KCT**
